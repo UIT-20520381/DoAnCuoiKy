@@ -13,18 +13,13 @@ struct Point {
     int x, y;
 };
 
-vector<Point> A = {
-  Point{ RONG / 2 + 2, CAO / 2 },
-  Point{ RONG / 2 + 1, CAO / 2 },
-  Point{ RONG / 2, CAO / 2 },
-  Point{RONG / 2 - 1,CAO / 2 }
-};
 
 Point Moi;
 int Diem = 0;
 Point duoi;
 
 class CONRAN;
+vector<Point> A;
 void MenuBatDau();
 void VeTuong();
 bool DungTuong();
@@ -43,7 +38,12 @@ void XoaConTro();
 
 class CONRAN {
 public:
-  
+     vector<Point> A = {
+     Point{ RONG / 2 + 2, CAO / 2 },
+     Point{ RONG / 2 + 1, CAO / 2 },
+     Point{ RONG / 2, CAO / 2 },
+     Point{RONG / 2 - 1,CAO / 2 }
+    };
     void Ve() {
         for (int i = 0; i < A.size(); i++) {
             gotoxy(A[i].x, A[i].y);
